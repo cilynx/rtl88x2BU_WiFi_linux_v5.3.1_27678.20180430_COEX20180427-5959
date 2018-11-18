@@ -2476,8 +2476,7 @@ void halbtc8822b1ant_set_ext_ant_switch(IN struct btc_coexist *btcoexist,
 	 * 0xcbd[1:0] = 2b'01 => Ant to BTG, WLA
 	 * 0xcbd[1:0] = 2b'10 => Ant to WLG
 	 */
-	switch_polatiry_inverse = (rfe_type->ext_ant_switch_ctrl_polarity == 1 ?
-			   ~switch_polatiry_inverse : switch_polatiry_inverse);
+	switch_polatiry_inverse = rfe_type->ext_ant_switch_ctrl_polarity == 1;
 
 
 	switch (pos_type) {
