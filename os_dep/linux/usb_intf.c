@@ -140,7 +140,7 @@ static void rtw_dev_shutdown(struct device *dev)
 
 
 #define USB_VENDER_ID_REALTEK		0x0BDA
-
+#define USB_VENDER_ID_EDIMAX		0x7392  //EDX
 
 /* DID_USB_v916_20130116 */
 static struct usb_device_id rtw_usb_id_tbl[] = {
@@ -241,6 +241,8 @@ static struct usb_device_id rtw_usb_id_tbl[] = {
 	{USB_DEVICE_AND_INTERFACE_INFO(0x7392, 0xB822, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, /* Edimax EW-7822ULC */
 	{USB_DEVICE_AND_INTERFACE_INFO(0x7392, 0xC822, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, /* Edimax EW-7822UTC */
 	{USB_DEVICE_AND_INTERFACE_INFO(0x0b05, 0x1841, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, /* ASUS AC1300 USB-AC55 B1 */
+	{USB_DEVICE_AND_INTERFACE_INFO(USB_VENDER_ID_EDIMAX, 0xB822, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, //EDX
+ 	{USB_DEVICE_AND_INTERFACE_INFO(USB_VENDER_ID_EDIMAX, 0xC822, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, //EDX	
 #endif /* CONFIG_RTL8822B */
 
 #ifdef CONFIG_RTL8723D
