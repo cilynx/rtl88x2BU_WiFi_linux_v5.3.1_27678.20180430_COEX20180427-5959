@@ -95,6 +95,7 @@ CONFIG_RTW_SDIO_PM_KEEP_POWER = y
 ###################### MP HW TX MODE FOR VHT #######################
 CONFIG_MP_VHT_HW_TX_MODE = n
 ###################### Platform Related #######################
+CONFIG_PLATFORM_ARM_RPI = n
 CONFIG_PLATFORM_I386_PC = y
 CONFIG_PLATFORM_ANDROID_X86 = n
 CONFIG_PLATFORM_ANDROID_INTEL_X86 = n
@@ -1026,6 +1027,14 @@ EXTRA_CFLAGS += -DRTW_LOG_LEVEL=$(CONFIG_RTW_LOG_LEVEL)
 endif
 
 EXTRA_CFLAGS += -DDM_ODM_SUPPORT_TYPE=0x04
+
+ifeq ($(CONFIG_PLATFORM_ARM_RPI), y)
+   EXTRA_CFLAGS += -DCONFIG_LITTLE_ENDIAN
+   ARCH := arm
+   KVER  := $(shell uname -r)
+   KSRC := /lib/modules/$(KVER)/build
+   MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/net/wireless/
+endif
 
 ifeq ($(CONFIG_PLATFORM_I386_PC), y)
 EXTRA_CFLAGS += -DCONFIG_LITTLE_ENDIAN
