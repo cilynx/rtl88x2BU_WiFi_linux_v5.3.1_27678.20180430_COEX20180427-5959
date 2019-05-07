@@ -16,6 +16,12 @@ Linux version 4.19.0-rc2-amd64 (debian-kernel@lists.debian.org) (gcc version 8.2
 gcc (Debian 8.2.0-9) 8.2.0
 ```
 
+```bash
+Linux 5.0.0-13-generic #14-Ubuntu SMP Mon Apr 15 14:59:14 UTC 2019 GNU/Linux
+
+gcc (Ubuntu 8.3.0-6ubuntu1) 8.3.0
+```
+
 ## DKMS installation
 
 ```bash
