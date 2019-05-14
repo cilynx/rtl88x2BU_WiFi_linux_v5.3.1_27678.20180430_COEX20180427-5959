@@ -33,6 +33,12 @@ sudo dkms build -m rtl88x2bu -v ${VER}
 sudo dkms install -m rtl88x2bu -v ${VER}
 sudo modprobe 88x2bu
 ```
+Or run the script containing the above commands:
+
+```bash
+cd rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20180427-5959
+sudo ./build.sh
+```
 
 ## Raspberry Pi Access Point
 
