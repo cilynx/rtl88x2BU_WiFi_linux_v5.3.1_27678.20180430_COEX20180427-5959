@@ -2,7 +2,9 @@
 
 Updated driver for rtl88x2bu wifi adaptors based on rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20180427-5959 originally downloaded from [D-Link's download page for the DWA-182 Rev D](https://support.dlink.com/ProductInfo.aspx?m=DWA-182).
 
-Build confirmed on:
+## Build confirmed on
+
+By original author:
 
 ```bash
 Linux version 4.18.0-0.bpo.1-amd64 (debian-kernel@lists.debian.org) (gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1)) #1 SMP Debian 4.18.6-1~bpo9+1 (2018-09-13)
@@ -22,6 +24,14 @@ Linux 5.0.0-13-generic #14-Ubuntu SMP Mon Apr 15 14:59:14 UTC 2019 GNU/Linux
 gcc (Ubuntu 8.3.0-6ubuntu1) 8.3.0
 ```
 
+By me:
+
+```bash
+Linux 5.0.9-2-MANJARO #1 SMP PREEMPT Sun Apr 21 07:11:08 UTC 2019 x86_64 GNU/Linux
+
+gcc version 8.3.0 (GCC)
+```
+
 ## DKMS installation
 
 ```bash
@@ -39,6 +49,21 @@ Or run the script containing the above commands:
 cd rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20180427-5959
 sudo ./build.sh
 ```
+
+### DKMS Dependencies
+
+Ubuntu:
+``` bash
+sudo apt-get install git linux-headers-generic build-essential
+```
+
+Arch/Manjaro:
+```bash
+sudo pacman -S git dkms linux50-headers base-devel
+```
+Replace the headers package with the corresponding kernel version if not using Kernel 5.0.x
+
+Example: `linux419-headers`
 
 ## Raspberry Pi Access Point
 
