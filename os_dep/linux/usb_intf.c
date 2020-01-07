@@ -236,6 +236,7 @@ static struct usb_device_id rtw_usb_id_tbl[] = {
 	{USB_DEVICE_AND_INTERFACE_INFO(USB_VENDER_ID_REALTEK, 0xB812, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, /* Default ID for USB Single-function, WiFi only */
 	/*=== Customer ID ===*/
 	{USB_DEVICE_AND_INTERFACE_INFO(0x13b1, 0x0043, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, /* Alpha - Alpha*/
+	{USB_DEVICE_AND_INTERFACE_INFO(0x2001, 0x331e, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, /* Dlink DWA-181*/
 	{USB_DEVICE_AND_INTERFACE_INFO(0x2001, 0x331c, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, /* Dlink DWA-182*/
 	{USB_DEVICE_AND_INTERFACE_INFO(0x2357, 0x0115, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, /* TP-Link Archer T4U V3 */
         {USB_DEVICE_AND_INTERFACE_INFO(0x2357, 0x012d, 0xff, 0xff, 0xff), .driver_info = RTL8822B}, /* TP-Link Archer T3U V1 */
