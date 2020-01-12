@@ -105,3 +105,28 @@ sudo reboot
 ```
 
 If you want to setup masquerading or bridging, check out [the official Raspberry Pi docs](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md).
+
+
+## Troubleshooting
+
+### WiFi don't connect
+#### Symptoms
+- NetworkManager repeatedly says "Authentication required by the wireless network". 
+- `journalctl` shows something like
+```log
+jan 10 13:32:01 galadriel NetworkManager[781]: <warn>  [1578673921.9003] sup-iface[0x55fff7e02323,wlxd01212121212]: connection disconnected (reason 2)
+jan 10 13:32:01 galadriel wpa_supplicant[792]: wlxd037453470f5: CTRL-EVENT-SSID-TEMP-DISABLED id=0 ssid="FooBarBaz" auth_failures=1 duration=10 reason=WRONG_KEY
+```
+#### Solution
+Disable new random MAC address generation, like in:
+
+```console
+$ cat /etc/NetworkManager/conf.d/no_mac_random.conf
+[no-random-mac-88x2bu]
+# replace wlxd01212121212 with the name of your device.
+match-device=wlxd01212121212
+wifi.scan-rand-mac-address=0
+wifi.cloned-mac-address=preserve
+ethernet.cloned-mac-address=preserve
+```
+[More info](https://bugs.launchpad.net/ubuntu/+source/network-manager/+bug/1681513)
