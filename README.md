@@ -63,7 +63,7 @@ Replace the headers package with the corresponding kernel version if not using K
 
 Example: `linux419-headers`
 
-## Removing the dkms Module
+## Removing the DKMS Module
 
 ```bash
 VER=$(sed -n 's/\PACKAGE_VERSION="\(.*\)"/\1/p' dkms.conf)
