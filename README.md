@@ -7,17 +7,15 @@ Updated driver for rtl88x2bu wifi adaptors based on rtl88x2BU_WiFi_linux_v5.3.1_
 By original author:
 
 ```bash
-Linux version 4.18.0-0.bpo.1-amd64 (debian-kernel@lists.debian.org) (gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1)) #1 SMP Debian 4.18.6-1~bpo9+1 (2018-09-13)
+Linux Q4 5.3.0-12-generic #13-Ubuntu SMP Tue Sep 17 12:35:50 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
 
-gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516
+gcc (Ubuntu 9.2.1-8ubuntu1) 9.2.1 20190909
 ```
-
-```bash
-Linux version 4.19.0-rc2-amd64 (debian-kernel@lists.debian.org) (gcc version 8.2.0 (Debian 8.2.0-5)) #1 SMP Debian 4.19~rc2-1~exp1 (2018-09-03)
-
-gcc (Debian 8.2.0-9) 8.2.0
 ```
+Linux xps 5.2.0-2-amd64 #1 SMP Debian 5.2.9-2 (2019-08-21) x86_64 GNU/Linux
 
+gcc (Debian 9.2.1-8) 9.2.1 20190909
+```
 ```bash
 Linux 5.0.0-13-generic #14-Ubuntu SMP Mon Apr 15 14:59:14 UTC 2019 GNU/Linux
 
