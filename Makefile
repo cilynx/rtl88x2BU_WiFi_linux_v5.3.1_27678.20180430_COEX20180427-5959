@@ -16,6 +16,9 @@ EXTRA_CFLAGS += -Wno-unused-function
 EXTRA_CFLAGS += -Wno-unused
 #EXTRA_CFLAGS += -Wno-uninitialized
 
+# Disables the error 'macro "__TIME__" might prevent reproducible builds'
+EXTRA_CFLAGS += -Wno-date-time
+
 GCC_VER_49 := $(shell echo `$(CC) -dumpversion | cut -f1-2 -d.` \>= 4.9 | bc )
 ifeq ($(GCC_VER_49),1)
 EXTRA_CFLAGS += -Wno-date-time	# Fix compile error && warning on gcc 4.9 and later
