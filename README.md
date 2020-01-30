@@ -4,8 +4,6 @@ Updated driver for rtl88x2bu wifi adaptors based on rtl88x2BU_WiFi_linux_v5.3.1_
 
 ## Build confirmed on
 
-By original author:
-
 ```bash
 Linux Q4 5.3.0-12-generic #13-Ubuntu SMP Tue Sep 17 12:35:50 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
 
@@ -21,8 +19,6 @@ Linux 5.0.0-13-generic #14-Ubuntu SMP Mon Apr 15 14:59:14 UTC 2019 GNU/Linux
 
 gcc (Ubuntu 8.3.0-6ubuntu1) 8.3.0
 ```
-
-By me:
 
 ```bash
 Linux 5.0.9-2-MANJARO #1 SMP PREEMPT Sun Apr 21 07:11:08 UTC 2019 x86_64 GNU/Linux
